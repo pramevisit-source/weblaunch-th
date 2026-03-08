@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ตกแต่งเว็บให้สวยด้วย CSS | WebLaunchTH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; padding: 60px 24px; line-height: 1.8; color: var(--text-muted); }
+    .article-body h2 { color: var(--text); margin: 40px 0 20px; border-left: 4px solid var(--primary); padding-left: 15px; }
+    .article-body p { margin-bottom: 20px; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled"><div class="nav-inner"><a href="index.html" class="logo">🚀 <span>WebLaunch<span class="accent">TH</span></span></a><ul class="nav-links"><li><a href="index.html">หน้าแรก</a></li><li><a href="articles.html">บทความ</a></li></ul></div></nav>
+  <article class="article-body">
+    <div class="section-header" style="text-align: left;"><span class="section-tag">CSS Design</span><h1 style="color: var(--text); font-size: 2.5rem; margin-bottom: 20px;">ตกแต่งเว็บให้สวยด้วย CSS: จากโล่งๆ เป็นพรีเมียม</h1></div>
+    <p>เมื่อเรามีโครงสร้างบ้านจาก HTML แล้ว ขั้นต่อมาคือการ "ทาสี" และ "จัดเฟอร์นิเจอร์" ซึ่งนั่นคือบทบาทของ <strong>CSS (Cascading Style Sheets)</strong> ครับ</p>
+    <h2>1. การใช้งาน CSS เบื้องต้น</h2>
+    <p>เราสามารถเขียน CSS ได้ 3 วิธี แต่ที่นิยมที่สุดคือการแยกไฟล์ <code>style.css</code> ออกมาต่างหาก เพื่อความเรียบร้อยของโค้ด</p>
+    <div class="code-block" style="background:#000; padding:15px; border-radius:8px;"><pre><code>body {
+  background-color: #080b14;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+}</code></pre></div>
+    <h2>2. สีและฟอนต์ (Colors & Fonts)</h2>
+    <p>การเลือกใช้พาเลทสีที่เข้ากัน จะช่วยให้เว็บไซต์ดูมีความเป็นมืออาชีพมากขึ้น แนะนำให้ใช้สีโทนเข้ม (Dark Mode) ตัดกับสีสะท้อนแสง (Neon/Accent) เพื่อความโดดเด่น</p>
+    <h2>3. Flexbox และ Grid</h2>
+    <p>เป็นเทคนิคการจัดวาง layout ที่ทรงพลังที่สุดในปัจจุบัน ช่วยให้คุณจัดหน้าเว็บให้รองรับมือถือ (Responsive) ได้อย่างง่ายดาย</p>
+    <div style="margin-top: 50px; border-top: 1px solid var(--border); padding-top: 30px;"><a href="articles.html" style="color:var(--primary-light); font-weight: 600;">← กลับไปหน้าบทความทั้งหมด</a></div>
+  </article>
+</body>
+</html>

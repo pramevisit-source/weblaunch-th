@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>บทความทั้งหมด | WebLaunchTH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ปรับแต่งหน้าบทความให้แสดงผลได้ทันที */
+    .articles-grid-page { padding: 40px 0 100px; }
+    .card { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-content { margin-bottom: 20px; }
+    /* ป้องกัน data-aos บัคในบาง browser ให้เริ่มแสดงผลเลย */
+    [data-aos] { opacity: 1 !important; transform: none !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">🚀 <span>WebLaunch<span class="accent">TH</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="section" style="padding-bottom: 20px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📖 คลังความรู้</span>
+        <h1>บทความทั้งหมด</h1>
+        <p class="section-sub">รวมเทคนิคและคู่มือการพัฒนาเว็บไซต์สำหรับผู้เริ่มต้นอย่างครบถ้วน</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="articles-grid-page">
+    <div class="container">
+      <div class="cards-grid three-col">
+        <!-- Card 1 -->
+        <div class="card glow-card">
+          <div class="card-content">
+            <span class="section-tag" style="font-size: 0.7rem;">HTML</span>
+            <h3 style="margin-top: 10px;">พื้นฐาน HTML สำหรับมือใหม่</h3>
+            <p>ทำความรู้จักกับโครงสร้างและ Tag สำคัญที่ต้องรู้ในการเริ่มทำเว็บเบื้องต้น...</p>
+          </div>
+          <a href="html-basics.html" class="btn btn-outline" style="width: 100%; justify-content: center;">อ่านบทความ →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card glow-card">
+          <div class="card-content">
+            <span class="section-tag" style="font-size: 0.7rem;">CSS</span>
+            <h3 style="margin-top: 10px;">ตกแต่งเว็บให้สวยด้วย CSS</h3>
+            <p>เรียนรู้วิธีการใช้สี font และ layout เพื่อสร้างความประทับใจให้คนดูและรองรับมือถือ...</p>
+          </div>
+          <a href="css-styling.html" class="btn btn-outline" style="width: 100%; justify-content: center;">อ่านบทความ →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card glow-card">
+          <div class="card-content">
+            <span class="section-tag" style="font-size: 0.7rem;">SEO</span>
+            <h3 style="margin-top: 10px;">วิธีทำให้เว็บติดอันดับ Google</h3>
+            <p>เทคนิค SEO เบื้องต้นที่จะช่วยให้คนหาเว็บของคุณเจอได้ง่ายขึ้นบนโลกอินเทอร์เน็ต...</p>
+          </div>
+          <a href="seo-tips.html" class="btn btn-outline" style="width: 100%; justify-content: center;">อ่านบทความ →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2025 WebLaunchTH · <a href="index.html" style="color:var(--primary-light)">กลับหน้าหลัก</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

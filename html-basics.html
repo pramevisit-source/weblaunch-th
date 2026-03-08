@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>พื้นฐาน HTML สำหรับมือใหม่ | WebLaunchTH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; padding: 60px 24px; line-height: 1.8; color: var(--text-muted); }
+    .article-body h2 { color: var(--text); margin: 40px 0 20px; border-left: 4px solid var(--primary); padding-left: 15px; }
+    .article-body p { margin-bottom: 20px; font-size: 1.05rem; }
+    .article-body blockquote { background: var(--surface); border-radius: 8px; padding: 20px; border-left: 4px solid var(--accent); margin-bottom: 20px; font-style: italic; }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">🚀 <span>WebLaunch<span class="accent">TH</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="articles.html">บทความ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="article-body">
+    <div class="section-header" style="text-align: left;">
+      <span class="section-tag">HTML Beginner</span>
+      <h1 style="color: var(--text); font-size: 2.5rem; margin-bottom: 20px;">พื้นฐาน HTML สำหรับมือใหม่: เริ่มต้นสร้างเว็บไซต์จากศูนย์</h1>
+    </div>
+
+    <p>
+      หากคุณเปรียบการสร้างเว็บไซต์เหมือนกับการสร้างบ้าน <strong>HTML (HyperText Markup Language)</strong> ก็คือ "โครงสร้างบ้าน" นั่นเองครับ ไม่ว่าจะเป็นเสาเข็ม ผนัง หรือหลังคา หากไม่มีโครงสร้างเหล่านี้ เราก็ไม่สามารถตกแต่งบ้านให้สวยงามได้
+    </p>
+
+    <h2>1. HTML คืออะไร?</h2>
+    <p>
+      HTML ไม่ใช่ภาษาโปรแกรมมิ่ง (Programming Language) แต่เป็นภาษา "Markup" ที่ใช้บอกเบราว์เซอร์ว่าส่วนไหนคือหัวข้อ (Heading) ส่วนไหนคือย่อหน้า (Paragraph) หรือส่วนไหนคือรูปภาพ
+    </p>
+
+    <h2>2. โครงสร้างพื้นฐานของไฟล์ HTML</h2>
+    <p>ทุกไฟล์ HTML จะเริ่มต้นด้วยโครงสร้างหน้าตาแบบนี้เสมอ:</p>
+    <div class="code-block" style="background:#000">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;ชื่อเว็บของคุณ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;หัวข้อหลัก&lt;/h1&gt;
+  &lt;p&gt;เนื้อหาในเว็บ...&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>3. Tag ที่ใช้บ่อยที่สุด</h2>
+    <ul>
+      <li><strong>&lt;h1&gt; ถึง &lt;h6&gt;:</strong> ใช้สำหรับหัวข้อ (h1 ใหญ่ที่สุด)</li>
+      <li><strong>&lt;p&gt;:</strong> ใช้สำหรับเนื้อหาที่เป็นข้อความทั่วไป</li>
+      <li><strong>&lt;a&gt;:</strong> ใช้สำหรับสร้างลิงก์เชื่อมโยง</li>
+      <li><strong>&lt;img&gt;:</strong> สำหรับใส่รูปภาพ</li>
+    </ul>
+
+    <blockquote>
+      <strong>ทิป:</strong> การเขียน HTML ที่ดีควรเลือกใช้ Tag ให้เหมาะสมกับเนื้อหา (Semantic HTML) เพื่อช่วยให้ Google เข้าใจเว็บของคุณได้ดีขึ้นครับ
+    </blockquote>
+
+    <div style="margin-top: 50px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <a href="articles.html" style="color:var(--primary-light); font-weight: 600;">← กลับไปหน้าบทความทั้งหมด</a>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>© 2025 WebLaunchTH</p>
+    </div>
+  </footer>
+</body>
+</html>

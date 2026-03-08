@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สร้างเว็บออนไลน์ | คู่มือฉบับสมบูรณ์</title>
+  <meta name="description" content="คู่มือฉบับสมบูรณ์สำหรับการสร้างเว็บไซต์จากศูนย์และนำขึ้นออนไลน์ด้วย VS Code, GitHub และ Vercel — ฟรีทั้งหมด" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🚀</span>
+        <span>WebLaunch<span class="accent">TH</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#intro">เริ่มต้น</a></li>
+        <li><a href="#steps">ขั้นตอน</a></li>
+        <li><a href="articles.html">บทความ</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ คู่มือฉบับสมบูรณ์ 2025</div>
+      <h1 class="hero-title">
+        สร้างเว็บไซต์<br/>
+        <span class="gradient-text">ขึ้นออนไลน์ได้เอง</span><br/>
+        ใน 30 นาที
+      </h1>
+      <p class="hero-sub">
+        จากไฟล์ HTML ไฟล์แรก ไปจนถึงเว็บไซต์ที่ทุกคนเข้าถึงได้ทั่วโลก<br/>
+        ด้วย <strong>VS Code · GitHub · Vercel</strong> — ฟรีทั้งหมด!
+      </p>
+      <div class="hero-cta">
+        <a href="#steps" class="btn btn-primary">เริ่มเลย →</a>
+        <a href="#tools" class="btn btn-outline">ดูเครื่องมือ</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">ฟรี</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">เครื่องมือ</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">30 นาที</span><span class="stat-label">เสร็จสิ้น</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="window-title">index.html</span>
+        </div>
+        <pre class="code-preview" id="typedCode"></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── INTRO ─── -->
+  <section class="section intro-section" id="intro">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🌐 บทนำ</span>
+        <h2>ทำไมต้องสร้างเว็บไซต์เอง?</h2>
+        <p class="section-sub">เว็บไซต์คือนามบัตรดิจิทัลของคุณ — เปิดตลอด 24/7 พร้อมบอกเล่าเรื่องราวของคุณสู่โลก</p>
+      </div>
+      <div class="cards-grid three-col">
+        <div class="card glow-card" data-aos>
+          <div class="card-icon">💡</div>
+          <h3>แสดงตัวตน</h3>
+          <p>Portfolio, บล็อก, หรือธุรกิจ — เว็บไซต์ของคุณเองคือพื้นที่ที่คุณควบคุมได้ 100%</p>
+        </div>
+        <div class="card glow-card" data-aos>
+          <div class="card-icon">💰</div>
+          <h3>ประหยัดค่าใช้จ่าย</h3>
+          <p>เครื่องมือทุกอย่างในคู่มือนี้ <strong>ฟรีทั้งหมด</strong> ไม่มีค่าใช้จ่ายซ่อนเร้น</p>
+        </div>
+        <div class="card glow-card" data-aos>
+          <div class="card-icon">🎓</div>
+          <h3>เรียนรู้ทักษะสำคัญ</h3>
+          <p>HTML และ CSS — พื้นฐานที่ทุกคนสร้างเว็บได้เลยโดยไม่ต้องมีพื้นฐานมาก่อน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TOOLS ─── -->
+  <section class="section tools-section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🛠️ เครื่องมือ</span>
+        <h2>3 เครื่องมือที่คุณต้องการ</h2>
+        <p class="section-sub">สมัครและดาวน์โหลดฟรี ใช้งานได้เลยทันที</p>
+      </div>
+      <div class="tools-timeline">
+        <div class="tool-item" data-aos>
+          <div class="tool-num">01</div>
+          <div class="tool-icon-wrap" style="--clr:#4fc3f7">
+            <img src="https://code.visualstudio.com/favicon.ico" alt="VS Code" onerror="this.textContent='💻'; this.tagName='span'" />
+          </div>
+          <div class="tool-body">
+            <h3>Visual Studio Code</h3>
+            <p>Editor โค้ดที่ดีที่สุดสำหรับมือใหม่ มี Syntax Highlighting, Auto-complete และ Extensions มากมาย</p>
+            <a href="https://code.visualstudio.com/" target="_blank" class="tool-link">Download VS Code →</a>
+          </div>
+        </div>
+        <div class="tool-item" data-aos>
+          <div class="tool-num">02</div>
+          <div class="tool-icon-wrap" style="--clr:#a78bfa">
+            <span class="tool-emoji">🐙</span>
+          </div>
+          <div class="tool-body">
+            <h3>GitHub</h3>
+            <p>แพลตฟอร์มฝากไฟล์เว็บบนคลาวด์ฟรี — เก็บไฟล์ทั้งหมดของคุณไว้ที่นี่ แล้วเชื่อมกับ Vercel เพื่อขึ้นออนไลน์</p>
+            <a href="https://github.com/" target="_blank" class="tool-link">สร้างบัญชี GitHub →</a>
+          </div>
+        </div>
+        <div class="tool-item" data-aos>
+          <div class="tool-num">03</div>
+          <div class="tool-icon-wrap" style="--clr:#34d399">
+            <span class="tool-emoji">▲</span>
+          </div>
+          <div class="tool-body">
+            <h3>Vercel</h3>
+            <p>เชื่อมกับ GitHub แล้ว Deploy เว็บขึ้น Internet ฟรีทันที! ทุกครั้งที่อัปโหลดไฟล์ใหม่ เว็บจะอัปเดตเองอัตโนมัติ</p>
+            <a href="https://vercel.com/" target="_blank" class="tool-link">สมัคร Vercel →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STEP-BY-STEP ─── -->
+  <section class="section steps-section" id="steps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📋 ขั้นตอน</span>
+        <h2>Step-by-Step Guide</h2>
+        <p class="section-sub">ทำตามได้เลย ทีละขั้นตอน</p>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-block" data-aos>
+        <div class="step-header">
+          <div class="step-badge">Step 1</div>
+          <h3>สร้างโฟลเดอร์และไฟล์ HTML</h3>
+        </div>
+        <div class="step-content">
+          <p>เปิด VS Code แล้วสร้างโฟลเดอร์โปรเจกต์ใหม่ จากนั้นสร้างไฟล์ <code>index.html</code> แล้วพิมพ์โค้ดพื้นฐานนี้ (นี่คือโค้ดตัวอย่างสำหรับเริ่มต้นเรียนรู้):</p>
+          <div class="code-block">
+            <div class="code-header">
+              <span>📄 index.html</span>
+              <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre><code><span class="c-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-str">"th"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-str">"UTF-8"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span>เว็บไซต์แรกของฉัน<span class="c-tag">&lt;/title&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span>
+<span class="c-tag">&lt;body&gt;</span>
+  <span class="c-tag">&lt;h1&gt;</span>สวัสดีโลก! 🌏<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;p&gt;</span>นี่คือเว็บไซต์แรกของฉัน<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></code></pre>
+          </div>
+          <div class="tip-box">
+            💡 <strong>Pro Tip:</strong> กด <code>!</code> แล้ว Tab ใน VS Code จะสร้าง HTML Boilerplate ให้อัตโนมัติ!
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-block" data-aos>
+        <div class="step-header">
+          <div class="step-badge">Step 2</div>
+          <h3>อัปโหลดไฟล์ขึ้น GitHub</h3>
+        </div>
+        <div class="step-content">
+          <ol class="numbered-list">
+            <li>ไปที่ <a href="https://github.com/new" target="_blank">github.com/new</a> แล้วสมัครบัญชีฟรี (ถ้ายังไม่มี)</li>
+            <li>กด <strong>New repository</strong> แล้วตั้งชื่อ (เช่น <code>my-first-website</code>)</li>
+            <li>เลือก <strong>Public</strong> แล้วกด <strong>Create repository</strong></li>
+            <li>เข้าไปใน Repository ที่สร้าง แล้วกด <strong>uploading an existing file</strong></li>
+            <li><strong>ลาก-วาง (Drag & Drop)</strong> ไฟล์ทั้งหมดจากโฟลเดอร์โปรเจกต์ลงในหน้านั้น</li>
+            <li>กด <strong>Commit changes</strong> เพื่อบันทึก — เสร็จแล้ว! 🎉</li>
+          </ol>
+          <div class="tip-box">
+            💡 <strong>Pro Tip:</strong> ไฟล์หลักที่ต้องอัปโหลดคือ <code>index.html</code> และไฟล์ CSS/JS ถ้ามี — GitHub จะเก็บทุกอย่างไว้ให้บนคลาวด์
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-block" data-aos>
+        <div class="step-header">
+          <div class="step-badge">Step 3</div>
+          <h3>นำเว็บขึ้นออนไลน์ด้วย Vercel</h3>
+        </div>
+        <div class="step-content">
+          <ol class="numbered-list">
+            <li>ไปที่ <a href="https://vercel.com" target="_blank">vercel.com</a> แล้วกด <strong>Sign Up with GitHub</strong></li>
+            <li>กด <strong>Add New → Project</strong> แล้วเลือก Repository ที่สร้างใน GitHub</li>
+            <li>กด <strong>Deploy</strong> รอประมาณ 30 วินาที</li>
+            <li>ได้รับ URL สาธารณะ เช่น <code>my-first-website.vercel.app</code> ทันที!</li>
+          </ol>
+          <div class="tip-box">
+            🚀 <strong>ข่าวดี:</strong> จากนี้ไปทุกครั้งที่คุณอัปโหลดไฟล์ใหม่บน GitHub เว็บจะอัปเดตเองอัตโนมัติ ไม่ต้องทำอะไรเพิ่ม!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DEPLOY ─── -->
+  <section class="section deploy-section" id="deploy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🚀 Deploy</span>
+        <h2>นำเว็บขึ้นออนไลน์ด้วย Vercel</h2>
+        <p class="section-sub">ขั้นตอนสุดท้าย — เว็บของคุณจะ Live ภายใน 2 นาที</p>
+      </div>
+      <div class="deploy-steps">
+        <div class="deploy-step" data-aos>
+          <div class="deploy-icon">1️⃣</div>
+          <h4>สมัคร Vercel</h4>
+          <p>ไปที่ <a href="https://vercel.com" target="_blank">vercel.com</a> แล้วกด <strong>Sign Up with GitHub</strong></p>
+        </div>
+        <div class="deploy-arrow">→</div>
+        <div class="deploy-step" data-aos>
+          <div class="deploy-icon">2️⃣</div>
+          <h4>Import Project</h4>
+          <p>กด <strong>Add New → Project</strong> แล้วเลือก Repository ที่สร้างไว้</p>
+        </div>
+        <div class="deploy-arrow">→</div>
+        <div class="deploy-step" data-aos>
+          <div class="deploy-icon">3️⃣</div>
+          <h4>Deploy!</h4>
+          <p>กด <strong>Deploy</strong> รอ 30 วินาที แล้วได้ URL สาธารณะทันที!</p>
+        </div>
+      </div>
+
+      <div class="update-box" data-aos>
+        <h3>🔄 อัปเดตเว็บไซต์ง่ายมาก!</h3>
+        <p>เมื่อแก้ไขไฟล์เสร็จแล้ว แค่ไปที่ GitHub Repository ของคุณ กด <strong>Add file → Upload files</strong> แล้วลาก-วางไฟล์ที่แก้ไขแล้วลงไป จากนั้นกด <strong>Commit changes</strong> — Vercel จะ Deploy เว็บใหม่ให้อัตโนมัติทันที ไม่ต้องทำอะไรเพิ่มเลย!</p>
+        <div class="tip-box" style="margin-top:16px">
+          ✨ <strong>ง่ายแค่นี้เอง:</strong> แก้ไฟล์ใน VS Code → อัปโหลดขึ้น GitHub → เว็บอัปเดตเอง
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURED ARTICLES (New for AdSense) ─── -->
+  <section class="section articles-preview" id="articles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📚 แหล่งเรียนรู้</span>
+        <h2>เจาะลึกการสร้างเว็บไซต์</h2>
+        <p class="section-sub">บทความแนะนำที่จะช่วยให้คุณเก่งขึ้น</p>
+      </div>
+      <div class="cards-grid three-col">
+        <div class="card glow-card" data-aos>
+          <h3>พื้นฐาน HTML สำหรับมือใหม่</h3>
+          <p>ทำความรู้จักกับโครงสร้างและ Tag สำคัญที่ต้องรู้ในการเริ่มทำเว็บ...</p>
+          <a href="html-basics.html" class="tool-link" style="margin-top:15px; display:inline-block;">อ่านต่อ →</a>
+        </div>
+        <div class="card glow-card" data-aos>
+          <h3>ตกแต่งเว็บให้สวยด้วย CSS</h3>
+          <p>เรียนรู้วิธีการใช้สี font และ layout เพื่อสร้างความประทับใจให้คนดู...</p>
+          <a href="css-styling.html" class="tool-link" style="margin-top:15px; display:inline-block;">อ่านต่อ →</a>
+        </div>
+        <div class="card glow-card" data-aos>
+          <h3>วิธีทำให้เว็บติดอันดับ Google</h3>
+          <p>เทคนิค SEO เบื้องต้นที่จะช่วยให้ผู้คนหาเว็บไซต์ของคุณเจอได้ง่ายขึ้น...</p>
+          <a href="seo-tips.html" class="tool-link" style="margin-top:15px; display:inline-block;">อ่านต่อ →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="articles.html" class="btn btn-outline">ดูบทความทั้งหมด</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">❓ FAQ</span>
+        <h2>คำถามที่พบบ่อย</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-aos>
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>ต้องมีพื้นฐานโปรแกรมมิ่งก่อนไหม?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>ไม่จำเป็นเลย! คู่มือนี้ออกแบบมาสำหรับผู้เริ่มต้นจริงๆ คุณแค่ต้องสามารถพิมพ์คำสั่งตามได้ก็เพียงพอ HTML และ CSS เป็น Markup Language ไม่ใช่ Programming Language เรียนรู้ได้เร็วมาก</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>เว็บที่ Deploy ด้วย Vercel ฟรีจริงไหม?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>ใช่! Vercel มี Free Tier ที่รองรับ Static Websites (HTML/CSS/JS) ได้ไม่จำกัด รวมถึง Custom Domain ด้วย สำหรับโปรเจกต์ส่วนตัวหรือ Portfolio ไม่มีค่าใช้จ่ายใดๆ</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>ใช้ Domain ชื่อของตัวเองได้ไหม?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>ได้เลย! ซื้อ Domain จาก Registrar เช่น Namecheap หรือ GoDaddy จากนั้นในหน้า Settings ของ Vercel Project กด "Add Domain" แล้วทำตามขั้นตอน Domain จะราคาประมาณ 100-400 บาท/ปี</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>ถ้าเว็บมีข้อผิดพลาด แก้ยังไง?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>กด <code>F12</code> ใน Browser เพื่อเปิด DevTools แล้วดูที่แท็บ <strong>Console</strong> หาเส้นที่มีสีแดง นั่นคือ Error ที่ต้องแก้ไข หรือใช้แท็บ <strong>Elements</strong> เพื่อดู HTML/CSS แบบ Real-time</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>ขั้นตอนต่อไปหลังสร้างเว็บแรกเสร็จคืออะไร?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>แนะนำให้เรียน <strong>CSS</strong> เพื่อตกแต่งหน้าเว็บ จากนั้น <strong>JavaScript</strong> เพื่อเพิ่ม Interactivity และ <strong>React</strong> หรือ <strong>Next.js</strong> สำหรับ Web App ที่ซับซ้อนขึ้น แหล่งเรียนฟรีแนะนำ: <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content" data-aos>
+        <h2>พร้อมสร้างเว็บไซต์แรกของคุณแล้วหรือยัง?</h2>
+        <p>เริ่มต้นวันนี้ ใช้เวลาแค่ 30 นาที คุณก็มีเว็บไซต์เป็นของตัวเองแล้ว</p>
+        <a href="#steps" class="btn btn-primary btn-large">เริ่มต้นเลย 🚀</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon">🚀</span>
+          <span>WebLaunch<span class="accent">TH</span></span>
+        </div>
+        <p class="footer-tagline">สร้างด้วย ❤️ เพื่อนักพัฒนาไทย</p>
+        <p class="footer-copy">© 2025 WebLaunchTH · สร้างเว็บไซต์ออนไลน์ฟรี</p>
+        <p class="footer-copy" style="margin-top:8px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+          <a href="privacy.html" style="color:var(--text-muted); text-decoration:none; font-size:0.8rem; opacity:0.7;">นโยบายความเป็นส่วนตัว</a>
+          <a href="about.html" style="color:var(--text-muted); text-decoration:none; font-size:0.8rem; opacity:0.7;">เกี่ยวกับเรา</a>
+          <a href="articles.html" style="color:var(--text-muted); text-decoration:none; font-size:0.8rem; opacity:0.7;">บทความทั้งหมด</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
